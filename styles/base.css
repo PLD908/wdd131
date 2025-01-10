@@ -25,7 +25,6 @@ header {
 nav {
     grid-area: nav;
     background-color: #333;
-    color: white;
     text-align: center;
     padding: 15px;
 }
@@ -40,7 +39,14 @@ nav ul {
 }
 
 nav ul li {
+    color: white;
     list-style-type: none;
+}
+nav ul li:hover {
+    color: black;
+    cursor: pointer;
+    height: 10px;
+    text-decoration: underline;
 }
 
 nav ul li a {
@@ -52,24 +58,105 @@ main {
     grid-area: content;
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    padding: 40px;
 }
 
 .card {
     flex: 3;
-    background-color: #ccc;
-    padding: 20px;
+    border-radius: 20px;
 }
 
 .aside {
     flex: 1;
-    background-color: #f9f9f9;
+    border-radius: 20px;
+    border: 1px solid grey;
+}
+
+.card h2, .aside h2 {
+    background-color: rgb(5, 54, 249);
+    color: white;
+    padding: 6px;
+    text-align: center;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+.about {
+    border: 1px solid grey;
+    border-radius: 0 0 20px 20px;
     padding: 20px;
+}
+
+.about .me {
+    display: flex;
+    gap: 50px;
+}
+
+.about .me img {
+    width: 15%;
+}
+
+.country h3 {
+    text-align: center;
+    border-bottom: 1px solid grey;
+    width: 70%;
+    margin: 0 auto
+}
+
+.country-content {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    margin-top: 25px;  
+}
+
+.aside ul {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 footer {
     grid-area: footer;
-    background-color: #333;
+    background-color: rgb(5, 54, 249);
     color: white;
     text-align: center;
-    padding: 65px;
+    padding: 15px;
+}
+
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row; 
+    }
+
+    .about .me {
+        flex-direction: row;
+    }
+
+    .country-content {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    nav ul {
+        justify-content: space-between;
+    }
+
+    main {
+        padding: 40px; 
+        gap: 40px; 
+    }
+
+    .about .me img {
+        width: 150px; 
+    }
+
+    .card, .aside {
+        border-radius: 20px;
+    }
 }
