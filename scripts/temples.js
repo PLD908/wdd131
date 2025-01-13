@@ -16,3 +16,19 @@ lastModified.innerHTML = `<span class="modified">Last Modification: ${new Intl.D
     timeStyle: "short",
   }
 ).format(modifiedDate)}</span>`;
+
+let bar = document.querySelector(".bars");
+let xmark = document.querySelector(".xmark");
+let mobileView = document.querySelector(".mobile-view");
+mobileView.style.display = "none";
+let desktop = document.querySelector(".desktop");
+
+bar.addEventListener("click", function () {
+    mobileView.style.display = "block";
+    desktop.style.display = "none";
+});
+
+xmark.addEventListener("click", function () {
+    mobileView.style.display = "none";
+    desktop.style.display = "flex";
+});
