@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    .featured-news article,
+    .latest-news article,
+    .reviews article,
+    .latest-news-article {
+        width: 90%;
+    }
+    
+    .contact input, .contact textarea {
+        width: 100%;
+    }
+}
