@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap');
+    
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+}
+
+/* Color Schema */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+}
+
+/* Section Styling */
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wireframe-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.wireframe {
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    margin: 10px 0;
+    min-width: 300px;
+}
+
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+}
